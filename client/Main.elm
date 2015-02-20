@@ -3,6 +3,9 @@ import Text (..)
 import List (..)
 import List as List
 import Json.Decode (..)
+import Signal as Signal
+import Http as Http
+import Http (..)
 
 type alias Slice = {
     sliceID : SliceID,
@@ -41,9 +44,17 @@ sliceDecoder = object3 Slice
 exampleSliceString : String
 exampleSliceString = "{\"sliceID\":843391,\"language\":[],\"fragment\":[\"main = wht\"]}"
 
-main : Element
-main = renderSliceString
+main : Signal Element
+main = Signal.map renderResponse (
+    Http.send (
+        Signal.constant (
+            Http.get "http://phischu.bzeutzheim.de/slices/2047255386632121960")))
 
+renderResponse : Response String -> Element
+renderResponse response = case response of
+    Success r -> plainText r
+    Waiting -> plainText "Waiting"
+    Failure i f -> asText i
 
 renderSliceString = case decodeString sliceDecoder exampleSliceString of
     Ok slice -> renderSlice slice
