@@ -1,6 +1,8 @@
 module Main where
 
+import System.Environment (getArgs)
+
 main :: IO ()
-main = print "hallo"
-
-
+main = do
+    args <- getArgs
+    print (length args)
