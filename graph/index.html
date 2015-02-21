@@ -3,8 +3,7 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" src="CodeFlower.js"></script>
 <script>
-var myFlower = new CodeFlower("#visualization", 300, 200);
+var myFlower = new CodeFlower("#visualization", 600, 600);
 $.getJSON('graph.json', function( data ) {
-  var jsonData = JSON.parse(data);
-  myFlower.update(jsonData);});
+  myFlower.update(data);});
 </script>
