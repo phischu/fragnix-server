@@ -23,5 +23,7 @@ executable fragnix-server
 
 executable generate-sites
   main-is:             generate-sites.hs
-  build-depends:       base >=4.7 && <4.8
+  build-depends:       base >=4.7 && <4.8,
+                       lucid >=2.9.1 && <2.10,
+                       text >=1.2.0.4 && <1.3
   default-language:    Haskell2010
