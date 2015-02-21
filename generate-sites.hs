@@ -6,3 +6,4 @@ main :: IO ()
 main = do
     args <- getArgs
     print (length args)
+    writeFile "site/hello.html" "Hello World"
