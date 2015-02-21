@@ -20,3 +20,8 @@ executable fragnix-server
                        scotty
   -- hs-source-dirs:      
   default-language:    Haskell2010
+
+executable generate-sites
+  main-is:             generate-sites.hs
+  build-depends:       base >=4.7 && <4.8
+  default-language:    Haskell2010
