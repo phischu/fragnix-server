@@ -11,19 +11,20 @@ import Lucid (
 
 import Data.Text.Lazy.IO (writeFile)
 
-import System.Environment (getArgs)
+import System.Directory (getDirectoryContents)
+import System.FilePath ((</>),(<.>))
 
+import Control.Monad (forM_)
 import Prelude hiding (writeFile)
 
 main :: IO ()
 main = do
-    args <- getArgs
-    putStrLn ("Number of slices: " ++ show (length args))
-    exampleSlice <- readSlice ("slices/" ++ show exampleSliceID)
-    writeFile "site/hello.html" (renderText (sliceSite exampleSlice))
-
-exampleSliceID :: SliceID
-exampleSliceID = 109962473027768259
+    sliceNames <- getDirectoryContents "slices" >>=
+        return . filter (not . (=='.') . head)
+    putStrLn ("Number of slices: " ++ show (length sliceNames))
+    forM_ sliceNames (\sliceName -> do
+        slice <- readSlice ("slices" </> sliceName)
+        writeFile ("site" </> sliceName <.> "html") (renderText (sliceSite slice)))
 
 sliceSite :: Slice -> Html ()
 sliceSite (Slice sliceID language fragment usages) =

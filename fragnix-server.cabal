@@ -24,6 +24,8 @@ executable fragnix-server
 executable generate-sites
   main-is:             generate-sites.hs
   build-depends:       base >=4.7 && <4.8,
+                       directory >=1.2.1.0 && <1.3,
+                       filepath >=1.3.0.2 && <1.4,
                        lucid >=2.9.1 && <2.10,
                        text >=1.2.0.4 && <1.3,
                        fragnix >=0.1.0.0 && <0.2
