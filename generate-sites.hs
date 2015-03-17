@@ -12,6 +12,8 @@ import Fragnix.ModuleDeclarations (
     parse,moduleDeclarationsWithEnvironment)
 import Fragnix.DeclarationSlices (
     declarationSlices)
+import Fragnix.SliceSymbols (
+    findMainSliceIDs)
 
 import Text.Blaze.Html.Renderer.Text (renderHtml)
 import Text.Blaze.Html5 (
@@ -33,11 +35,6 @@ import Prelude hiding (writeFile,div,unlines)
 main :: IO ()
 main = do
 
-    createDirectoryIfMissing True "site"
-
-    writeFile "site/index.html" (renderHtml indexHtml)
-
-
     modulePaths <- getArgs
     modules <- forM modulePaths parse
 
@@ -46,17 +43,26 @@ main = do
     let declarations = moduleDeclarationsWithEnvironment environment modules
         (slices,symbolSlices) = declarationSlices declarations
 
+    let mainSliceIDs = findMainSliceIDs symbolSlices
+
     putStrLn ("Number of slices: " ++ show (length slices))
+
+    createDirectoryIfMissing True "site"
+
+    writeFile "site/index.html" (renderHtml (indexHtml mainSliceIDs))
 
     createDirectoryIfMissing True "site/slice"
 
     forM_ slices (\slice@(Slice sliceID _ _ _) -> do
         writeFile ("site/slice" </> show sliceID <.> "html") (renderHtml (sliceHtml slice)))
 
-indexHtml :: Html
-indexHtml = docTypeHtml (do
+indexHtml :: [SliceID] -> Html
+indexHtml mainSliceIDs = docTypeHtml (do
     body (do
-        "Hello and welcome to fragnix!"))
+        "Hello and welcome to fragnix!"
+        "You could start exploring from one of these: "
+        forM_ mainSliceIDs (\mainSliceID ->
+            (a ! href (toValue ("slice/" ++ sliceURL mainSliceID))) (toHtml mainSliceID))))
 
 sliceHtml :: Slice -> Html
 sliceHtml (Slice sliceID language fragment uses) = docTypeHtml (do
@@ -76,7 +82,7 @@ usesHtml uses = do
         let usednamehtml = pre (usedNameHtml usedName)
         case reference of
             OtherSlice otherSliceID -> do
-                (a ! href (sliceURL otherSliceID)) usednamehtml
+                (a ! href (toValue (sliceURL otherSliceID))) usednamehtml
             _ -> do
                 usednamehtml)
 
@@ -90,8 +96,8 @@ nameHtml :: Name -> Html
 nameHtml (Identifier identifier) = toHtml identifier
 nameHtml (Operator operator) = toHtml operator
 
-sliceURL :: SliceID -> AttributeValue
-sliceURL sliceID = toValue (show sliceID ++ ".html")
+sliceURL :: SliceID -> String
+sliceURL sliceID = show sliceID ++ ".html"
 
 languageHtml :: Language -> Html
 languageHtml (Language extensions) = do
