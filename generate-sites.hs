@@ -6,6 +6,12 @@ import Fragnix.Slice (
     Slice(Slice),SliceID,
     Language(Language),Fragment(Fragment),
     Use(Use),UsedName(..),Name(..),Reference(..))
+import Fragnix.Environment (
+    loadEnvironment)
+import Fragnix.ModuleDeclarations (
+    parse,moduleDeclarationsWithEnvironment)
+import Fragnix.DeclarationSlices (
+    declarationSlices)
 
 import Text.Blaze.Html.Renderer.Text (renderHtml)
 import Text.Blaze.Html5 (
@@ -18,20 +24,39 @@ import Data.Text.Lazy.IO (writeFile)
 
 import System.Directory (getDirectoryContents,createDirectoryIfMissing)
 import System.FilePath ((</>),(<.>))
+import System.Environment (getArgs)
 
-import Control.Monad (forM_)
+import Control.Monad (forM_,forM)
 import Data.Monoid ((<>))
 import Prelude hiding (writeFile,div,unlines)
 
 main :: IO ()
 main = do
-    sliceNames <- getDirectoryContents "slices" >>=
-        return . filter (not . (=='.') . head)
-    putStrLn ("Number of slices: " ++ show (length sliceNames))
+
     createDirectoryIfMissing True "site"
-    forM_ sliceNames (\sliceName -> do
-        slice <- readSlice ("slices" </> sliceName)
-        writeFile ("site" </> sliceName <.> "html") (renderHtml (sliceHtml slice)))
+
+    writeFile "site/index.html" (renderHtml indexHtml)
+
+
+    modulePaths <- getArgs
+    modules <- forM modulePaths parse
+
+    environment <- loadEnvironment "builtin_environment"
+
+    let declarations = moduleDeclarationsWithEnvironment environment modules
+        (slices,symbolSlices) = declarationSlices declarations
+
+    putStrLn ("Number of slices: " ++ show (length slices))
+
+    createDirectoryIfMissing True "site/slice"
+
+    forM_ slices (\slice@(Slice sliceID _ _ _) -> do
+        writeFile ("site/slice" </> show sliceID <.> "html") (renderHtml (sliceHtml slice)))
+
+indexHtml :: Html
+indexHtml = docTypeHtml (do
+    body (do
+        "Hello and welcome to fragnix!"))
 
 sliceHtml :: Slice -> Html
 sliceHtml (Slice sliceID language fragment uses) = docTypeHtml (do
