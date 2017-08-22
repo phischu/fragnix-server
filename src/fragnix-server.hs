@@ -1,13 +1,14 @@
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE FlexibleInstances #-}
 
 import Fragnix.Environment (
   loadEnvironment)
 import Web.Scotty (
   scotty, get,
-  ActionM, header, html, json, liftAndCatchIO)
+  ActionM, header, param, html, json, liftAndCatchIO)
 import Language.Haskell.Exts (
   prettyPrint, ModuleName(ModuleName))
+import Language.Haskell.Names (
+  Environment, Symbol)
 
 import Text.Blaze.Html.Renderer.Text (
   renderHtml)
@@ -24,7 +25,7 @@ import System.Directory (
 import Data.Text (
   Text)
 import qualified Data.Map as Map (
-  keys)
+  toList, keys)
 import Control.Monad (
   forM_)
 import Data.String (
@@ -35,7 +36,7 @@ main :: IO ()
 main = scotty 3000 (do
   get "/" serveIndex
   get "/environments" serveEnvironments
-  get "/environments/scotty" serveEnvironment)
+  get "/environments/:environmentName" serveEnvironment)
 
 
 serveIndex :: ActionM ()
@@ -61,23 +62,19 @@ environmentsHtml = docTypeHtml (body (do
 serveEnvironment :: ActionM ()
 serveEnvironment = do
   acceptHeader <- header "Accept"
-  environment <- liftAndCatchIO (loadEnvironment "data/environments/scotty")
+  environmentName <- param "environmentName"
+  let environmentPath = "data/environments/" ++ environmentName
+  environment <- liftAndCatchIO (loadEnvironment environmentPath)
   case acceptHeader of
     Just "application/json" -> do
-      json environment
+      json (deconstructEnvironment environment)
     _ -> do
       let moduleNames = map prettyPrint (Map.keys environment)
-      html (renderHtml (environmentHtml "scotty" moduleNames))
+      html (renderHtml (environmentHtml environmentName moduleNames))
 
-instance ToJSON (ModuleName ()) where
-  toJSON (ModuleName () moduleName) = toJSON moduleName
-
-instance ToJSONKey (ModuleName ())
-
-instance FromJSON (ModuleName ()) where
-  parseJSON v = ModuleName () <$> parseJSON v
-
-instance FromJSONKey (ModuleName ())
+deconstructEnvironment :: Environment -> [(String, [Symbol])]
+deconstructEnvironment =
+  map (\(ModuleName () moduleName, symbols) -> (moduleName, symbols)) . Map.toList
 
 environmentHtml :: String -> [String] -> Html
 environmentHtml environmentName moduleNames = docTypeHtml (body (do
