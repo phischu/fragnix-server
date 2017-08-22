@@ -1,9 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE FlexibleInstances #-}
 
+import Fragnix.Environment (
+  loadEnvironment)
 import Web.Scotty (
   scotty, get,
-  ActionM, html, liftAndCatchIO)
-
+  ActionM, header, html, json, liftAndCatchIO)
+import Language.Haskell.Exts (
+  prettyPrint, ModuleName(ModuleName))
 
 import Text.Blaze.Html.Renderer.Text (
   renderHtml)
@@ -12,11 +16,15 @@ import Text.Blaze.Html5 (
   body, ul, li, a)
 import Text.Blaze.Html5.Attributes (
   href)
+import Data.Aeson (
+  ToJSON(toJSON), ToJSONKey, FromJSON(parseJSON), FromJSONKey)
 
 import System.Directory (
   listDirectory)
 import Data.Text (
   Text)
+import qualified Data.Map as Map (
+  keys)
 import Control.Monad (
   forM_)
 import Data.String (
@@ -52,8 +60,24 @@ environmentsHtml = docTypeHtml (body (do
 
 serveEnvironment :: ActionM ()
 serveEnvironment = do
-  moduleNames <- liftAndCatchIO (listDirectory ("data/environments/scotty"))
-  html (renderHtml (environmentHtml "scotty" moduleNames))
+  acceptHeader <- header "Accept"
+  environment <- liftAndCatchIO (loadEnvironment "data/environments/scotty")
+  case acceptHeader of
+    Just "application/json" -> do
+      json environment
+    _ -> do
+      let moduleNames = map prettyPrint (Map.keys environment)
+      html (renderHtml (environmentHtml "scotty" moduleNames))
+
+instance ToJSON (ModuleName ()) where
+  toJSON (ModuleName () moduleName) = toJSON moduleName
+
+instance ToJSONKey (ModuleName ())
+
+instance FromJSON (ModuleName ()) where
+  parseJSON v = ModuleName () <$> parseJSON v
+
+instance FromJSONKey (ModuleName ())
 
 environmentHtml :: String -> [String] -> Html
 environmentHtml environmentName moduleNames = docTypeHtml (body (do
