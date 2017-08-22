@@ -1,0 +1,1 @@
+[{"name":"inline","module":"GHC.Magic","entity":"value"},{"name":"lazy","module":"GHC.Magic","entity":"value"},{"name":"oneShot","module":"GHC.Magic","entity":"value"},{"name":"runRW#","module":"GHC.Magic","entity":"value"}]
