@@ -1,0 +1,1 @@
+{"sliceID":1682947527707159485,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["initialOffset :: Int","initialOffset = 40"],"instances":[],"language":{"extensions":["BangPatterns","RecordWildCards","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

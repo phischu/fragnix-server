@@ -1,0 +1,1 @@
+{"sliceID":7680137735569025452,"uses":[{"reference":{"builtinModule":"System.Posix.Types"},"usedName":{"typeName":{"identifier":"FileMode"}},"qualification":null}],"fragment":["socketMode :: FileMode","socketMode = (49152)"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

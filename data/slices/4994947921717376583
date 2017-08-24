@@ -1,0 +1,1 @@
+{"sliceID":4994947921717376583,"uses":[{"reference":{"builtinModule":"Foreign.C.Types"},"usedName":{"typeName":{"identifier":"CInt"}},"qualification":null}],"fragment":["sigQUIT :: CInt","sigQUIT = 3"],"instances":[],"language":{"extensions":["CApiFFI","DeriveDataTypeable","NondecreasingIndentation","MultiParamTypeClasses","ExplicitForAll","PatternGuards"]}}

@@ -1,0 +1,1 @@
+{"sliceID":8465351735722881111,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"IO"}},"qualification":null}],"fragment":["data Waiter a = Waiter{notify :: a -> IO (), waitFor :: IO a}"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

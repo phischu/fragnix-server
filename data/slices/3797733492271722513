@@ -1,0 +1,1 @@
+{"sliceID":3797733492271722513,"uses":[],"fragment":["type Success a f r = a -> f r"],"instances":[],"language":{"extensions":["DeriveDataTypeable","GeneralizedNewtypeDeriving","Rank2Types","TemplateHaskellQuotes","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards","TemplateHaskell"]}}

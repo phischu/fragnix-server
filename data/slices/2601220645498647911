@@ -1,0 +1,1 @@
+{"sliceID":2601220645498647911,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["frameHeaderLength :: Int","frameHeaderLength = 9"],"instances":[],"language":{"extensions":["DeriveDataTypeable","OverloadedStrings","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

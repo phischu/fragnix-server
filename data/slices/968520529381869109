@@ -1,0 +1,1 @@
+{"sliceID":968520529381869109,"uses":[{"reference":{"otherSlice":6658493354337671128},"usedName":{"typeName":{"identifier":"Text"}},"qualification":null}],"fragment":["type CookiesText = [(Text, Text)]"],"instances":[],"language":{"extensions":["OverloadedStrings","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

@@ -1,0 +1,1 @@
+{"sliceID":7485023533204378511,"uses":[{"reference":{"builtinModule":"Foreign.C.Types"},"usedName":{"typeName":{"identifier":"CInt"}},"qualification":null}],"fragment":["sigUSR2 :: CInt","sigUSR2 = 12"],"instances":[],"language":{"extensions":["CApiFFI","DeriveDataTypeable","NondecreasingIndentation","MultiParamTypeClasses","ExplicitForAll","PatternGuards"]}}

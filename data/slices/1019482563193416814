@@ -1,0 +1,1 @@
+{"sliceID":1019482563193416814,"uses":[{"reference":{"builtinModule":"GHC.Int"},"usedName":{"typeName":{"identifier":"Int64"}},"qualification":null}],"fragment":["type ByteOffset = Int64"],"instances":[],"language":{"extensions":["RankNTypes","MagicHash","BangPatterns","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

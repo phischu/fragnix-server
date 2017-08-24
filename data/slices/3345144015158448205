@@ -1,0 +1,1 @@
+{"sliceID":3345144015158448205,"uses":[{"reference":{"builtinModule":"GHC.Prim"},"usedName":{"typeName":{"identifier":"Int#"}},"qualification":null}],"fragment":["type Int64_# = Int#"],"instances":[],"language":{"extensions":["MagicHash","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

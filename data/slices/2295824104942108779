@@ -1,0 +1,1 @@
+{"sliceID":2295824104942108779,"uses":[{"reference":{"otherSlice":7263425107459960998},"usedName":{"typeName":{"identifier":"FormattedTime"}},"qualification":null}],"fragment":["type ZonedDate = FormattedTime"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

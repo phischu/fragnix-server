@@ -1,0 +1,1 @@
+{"sliceID":7663452897649119075,"uses":[{"reference":{"builtinModule":"System.Posix.Types"},"usedName":{"typeName":{"identifier":"FileMode"}},"qualification":null}],"fragment":["regularFileMode :: FileMode","regularFileMode = (32768)"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

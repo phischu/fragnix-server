@@ -1,0 +1,1 @@
+{"sliceID":6578289415172039223,"uses":[],"fragment":["add :: a -> b -> [(a, b)] -> [(a, b)]","add k v m = (k, v) : m"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

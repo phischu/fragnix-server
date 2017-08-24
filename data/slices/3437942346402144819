@@ -1,0 +1,1 @@
+{"sliceID":3437942346402144819,"uses":[],"fragment":["unSigT :: Type -> Type","unSigT (SigT t _) = t\nunSigT t = t"],"instances":[],"language":{"extensions":["BangPatterns","FlexibleInstances","NamedFieldPuns","NoImplicitPrelude","UndecidableInstances","TemplateHaskellQuotes","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards","TemplateHaskell"]}}

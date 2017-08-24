@@ -1,0 +1,1 @@
+{"sliceID":8845132171341012514,"uses":[{"reference":{"otherSlice":4871054613251541877},"usedName":{"typeName":{"identifier":"HashMap"}},"qualification":"Map"}],"fragment":["type Map = Map.HashMap"],"instances":[],"language":{"extensions":["RoleAnnotations","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

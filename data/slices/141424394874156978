@@ -1,0 +1,1 @@
+{"sliceID":141424394874156978,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["type Weight = Int"],"instances":[],"language":{"extensions":["BangPatterns","RecordWildCards","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

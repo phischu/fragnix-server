@@ -1,0 +1,1 @@
+{"sliceID":867745804881963450,"uses":[{"reference":{"builtinModule":"GHC.Base"},"usedName":{"typeName":{"identifier":"String"}},"qualification":null}],"fragment":["exeExtension :: String","exeExtension = \"\""],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

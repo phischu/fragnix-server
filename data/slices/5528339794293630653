@@ -1,0 +1,1 @@
+{"sliceID":5528339794293630653,"uses":[],"fragment":["data Step s a = Done\n              | Skip !s\n              | Yield !a !s"],"instances":[],"language":{"extensions":["BangPatterns","ExistentialQuantification","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

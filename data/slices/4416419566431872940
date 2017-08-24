@@ -1,0 +1,1 @@
+{"sliceID":4416419566431872940,"uses":[{"reference":{"otherSlice":1376228001488116683},"usedName":{"typeName":{"identifier":"Signal"}},"qualification":null}],"fragment":["nullSignal :: Signal","nullSignal = 0"],"instances":[],"language":{"extensions":["CApiFFI","DeriveDataTypeable","NondecreasingIndentation","MultiParamTypeClasses","ExplicitForAll","PatternGuards"]}}

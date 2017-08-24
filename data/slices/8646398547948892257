@@ -1,0 +1,1 @@
+{"sliceID":8646398547948892257,"uses":[],"fragment":["data Zip a b m = Z1 !a !b\n               | Z2 !a !b !m"],"instances":[],"language":{"extensions":["BangPatterns","MagicHash","Rank2Types","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

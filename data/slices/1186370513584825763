@@ -1,0 +1,1 @@
+{"sliceID":1186370513584825763,"uses":[],"fragment":["data UseProvidedHandle = UseProvidedHandle"],"instances":[{"instanceID":8763105552658001104,"instancePart":"ForThisType"},{"instanceID":1581007029964411728,"instancePart":"ForThisType"}],"language":{"extensions":["DeriveDataTypeable","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

@@ -1,0 +1,1 @@
+{"sliceID":1963246216841314852,"uses":[{"reference":{"otherSlice":1152530676997681812},"usedName":{"valueName":{"identifier":"proxy_tc"}},"qualification":null}],"fragment":["proxyTypeQ :: TypeQ -> TypeQ","proxyTypeQ t = appT (conT proxy_tc) t"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

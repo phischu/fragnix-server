@@ -1,0 +1,1 @@
+{"sliceID":1694979736965188408,"uses":[],"fragment":["data OpenMode = ReadOnly\n              | WriteOnly\n              | ReadWrite"],"instances":[],"language":{"extensions":["CApiFFI","NondecreasingIndentation","RecordWildCards","MultiParamTypeClasses","ExplicitForAll","PatternGuards"]}}

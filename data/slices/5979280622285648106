@@ -1,0 +1,1 @@
+{"sliceID":5979280622285648106,"uses":[{"reference":{"otherSlice":4708123967669103733},"usedName":{"typeName":{"identifier":"QueryItem"}},"qualification":null}],"fragment":["type Query = [QueryItem]"],"instances":[],"language":{"extensions":["OverloadedStrings","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

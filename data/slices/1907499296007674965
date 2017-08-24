@@ -1,0 +1,1 @@
+{"sliceID":1907499296007674965,"uses":[{"reference":{"otherSlice":4942888801223460576},"usedName":{"typeName":{"identifier":"ByteString"}},"qualification":null}],"fragment":["newtype S = S{input :: ByteString}"],"instances":[],"language":{"extensions":["BangPatterns","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

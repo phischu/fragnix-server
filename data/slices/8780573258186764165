@@ -1,0 +1,1 @@
+{"sliceID":8780573258186764165,"uses":[{"reference":{"otherSlice":628686228066488211},"usedName":{"typeName":{"identifier":"Application"}},"qualification":null}],"fragment":["type Middleware = Application -> Application"],"instances":[],"language":{"extensions":["Rank2Types","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

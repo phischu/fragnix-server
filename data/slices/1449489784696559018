@@ -1,0 +1,1 @@
+{"sliceID":1449489784696559018,"uses":[],"fragment":["data C s = C0 !s\n         | C1 !s"],"instances":[],"language":{"extensions":["BangPatterns","MagicHash","Rank2Types","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}
