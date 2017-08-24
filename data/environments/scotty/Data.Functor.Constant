@@ -1,1 +1,1 @@
-[{"name":"Constant","module":"2223363834275051064","entity":"newtype"},{"name":"Constant","module":"2223363834275051064","type":"Constant","entity":"constructor"},{"constructors":["Constant"],"name":"getConstant","module":"2223363834275051064","type":"Constant","entity":"selector"}]
+[{"name":"Constant","module":"3700269775583231652","entity":"newtype"},{"name":"Constant","module":"3700269775583231652","type":"Constant","entity":"constructor"},{"constructors":["Constant"],"name":"getConstant","module":"3700269775583231652","type":"Constant","entity":"selector"}]

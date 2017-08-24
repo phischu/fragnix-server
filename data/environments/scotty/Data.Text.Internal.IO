@@ -1,1 +1,1 @@
-[{"name":"hGetLineWith","module":"5775247214461513731","entity":"value"},{"name":"readChunk","module":"2789045432157126946","entity":"value"}]
+[{"name":"hGetLineWith","module":"1060595702880126751","entity":"value"},{"name":"readChunk","module":"1799642839768709490","entity":"value"}]
