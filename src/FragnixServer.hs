@@ -33,11 +33,11 @@ import Data.Proxy (
   Proxy(Proxy))
 
 
-type API = EnvironmentAPI :<|> EnvironmentSlicesAPI
+type API = EnvironmentAPI :<|> EnvironmentSlicesAPI :<|> SliceTransitiveAPI
 
 application :: Application
 application = serve (Proxy :: Proxy API) (
-  serveEnvironment :<|> serveEnvironmentSlices)
+  serveEnvironment :<|> serveEnvironmentSlices :<|> serveSliceTransitive)
 
 
 type EnvironmentAPI =
@@ -68,6 +68,17 @@ serveEnvironmentSlices environmentName = do
           OtherSlice sliceID -> return sliceID
           _ -> []
   sliceIDs <- liftIO (execStateT (forM referencedSliceIDs loadSliceIDsStateful) [])
+  slices <- liftIO (forM sliceIDs (\sliceID -> do
+    readSlice ("data/slices/" ++ show sliceID)))
+  return slices
+
+
+type SliceTransitiveAPI =
+  "slices" :> Capture "sliceID" SliceID :> "transitive" :> Get '[JSON] [Slice]
+
+serveSliceTransitive :: Server SliceTransitiveAPI
+serveSliceTransitive sliceID = do
+  sliceIDs <- liftIO (execStateT (loadSliceIDsStateful sliceID) [])
   slices <- liftIO (forM sliceIDs (\sliceID -> do
     readSlice ("data/slices/" ++ show sliceID)))
   return slices
