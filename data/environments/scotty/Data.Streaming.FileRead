@@ -1,1 +1,1 @@
-[{"name":"ReadHandle","module":"2728522324134837534","entity":"newtype"},{"name":"openFile","module":"4386212530064428676","entity":"value"},{"name":"closeFile","module":"1602704414745009207","entity":"value"},{"name":"readChunk","module":"1331628787784860920","entity":"value"}]
+[{"name":"ReadHandle","module":"F2728522324134837534","entity":"newtype"},{"name":"openFile","module":"F4386212530064428676","entity":"value"},{"name":"closeFile","module":"F1602704414745009207","entity":"value"},{"name":"readChunk","module":"F1331628787784860920","entity":"value"}]
