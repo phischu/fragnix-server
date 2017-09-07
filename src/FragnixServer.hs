@@ -6,7 +6,7 @@ module FragnixServer where
 
 import Fragnix.Slice (
   Slice(Slice), SliceID, Use(Use), Reference(OtherSlice),
-  readSlice)
+  readSlice, writeSlice)
 import Fragnix.Environment (
   loadEnvironment)
 import Fragnix.SliceCompiler (
@@ -14,7 +14,7 @@ import Fragnix.SliceCompiler (
 import Fragnix.DeclarationSlices (
   moduleReference)
 import Servant (
-  Get, JSON, (:>), Capture, (:<|>)((:<|>)),
+  Get, Post, ReqBody, JSON, (:>), Capture, (:<|>)((:<|>)),
   serve, Server, Application)
 import Language.Haskell.Exts (
   ModuleName(ModuleName))
@@ -33,11 +33,19 @@ import Data.Proxy (
   Proxy(Proxy))
 
 
-type API = EnvironmentAPI :<|> EnvironmentSlicesAPI :<|> SliceTransitiveAPI
+type API =
+  EnvironmentAPI :<|>
+  EnvironmentSlicesAPI :<|>
+  SliceTransitiveAPI :<|>
+  SlicePublishAPI
+
 
 application :: Application
 application = serve (Proxy :: Proxy API) (
-  serveEnvironment :<|> serveEnvironmentSlices :<|> serveSliceTransitive)
+  serveEnvironment :<|>
+  serveEnvironmentSlices :<|>
+  serveSliceTransitive :<|>
+  serveSlicePublish)
 
 
 type EnvironmentAPI =
@@ -94,4 +102,13 @@ loadSliceIDsStateful sliceID = do
             recursiveInstanceSliceIDs = sliceInstanceIDs slice
         forM_ recursiveSliceIDs loadSliceIDsStateful
         forM_ recursiveInstanceSliceIDs loadSliceIDsStateful)
+
+
+type SlicePublishAPI =
+  "slices" :> "publish" :> ReqBody '[JSON] [Slice] :> Post '[JSON] ()
+
+serveSlicePublish :: Server SlicePublishAPI
+serveSlicePublish slices = do
+  liftIO (forM_ slices (\slice@(Slice sliceID _ _ _ _) ->
+    writeSlice ("data/slices/" ++ show sliceID) slice))
 
