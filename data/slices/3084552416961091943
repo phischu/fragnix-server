@@ -1,1 +1,0 @@
-{"sliceID":3084552416961091943,"uses":[{"reference":{"builtinModule":"Foreign.C.Types"},"usedName":{"typeName":{"identifier":"CInt"}},"qualification":null}],"fragment":["sigPOLL :: CInt","sigPOLL = 29"],"instances":[],"language":{"extensions":["CApiFFI","DeriveDataTypeable","NondecreasingIndentation","MultiParamTypeClasses","ExplicitForAll","PatternGuards"]}}

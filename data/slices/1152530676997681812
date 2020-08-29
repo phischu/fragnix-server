@@ -1,1 +1,0 @@
-{"sliceID":1152530676997681812,"uses":[],"fragment":["proxy_d, proxy_tc :: Name","proxy_d = mkNameG_d \"base\" \"Data.Proxy\" \"Proxy\"","proxy_tc = mkNameG_tc \"base\" \"Data.Proxy\" \"Proxy\""],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

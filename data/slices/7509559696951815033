@@ -1,1 +1,0 @@
-{"sliceID":7509559696951815033,"uses":[],"fragment":["data AreWeStrict = Strict\n                 | Lazy"],"instances":[],"language":{"extensions":["BangPatterns","PatternGuards","DeriveDataTypeable","StandaloneDeriving","RoleAnnotations","TypeFamilies","MagicHash","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll"]}}

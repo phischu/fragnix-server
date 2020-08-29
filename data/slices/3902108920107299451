@@ -1,1 +1,0 @@
-{"sliceID":3902108920107299451,"uses":[],"fragment":["data MaybeS a = NothingS\n              | JustS !a"],"instances":[{"instanceID":5337870952415684632,"instancePart":"ForThisTypeOfUnknownClass"}],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

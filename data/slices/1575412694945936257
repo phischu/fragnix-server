@@ -1,1 +1,0 @@
-{"sliceID":1575412694945936257,"uses":[{"reference":{"builtinModule":"GHC.Word"},"usedName":{"typeName":{"identifier":"Word32"}},"qualification":null}],"fragment":["type ErrorCode = Word32"],"instances":[],"language":{"extensions":["DeriveDataTypeable","OverloadedStrings","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

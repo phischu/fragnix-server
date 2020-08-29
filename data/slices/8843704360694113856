@@ -1,1 +1,0 @@
-{"sliceID":8843704360694113856,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["shiftForWrite :: Int","shiftForWrite = 32"],"instances":[],"language":{"extensions":["BangPatterns","RecordWildCards","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

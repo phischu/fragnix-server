@@ -1,1 +1,0 @@
-{"sliceID":1138593654318971161,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["copyLimit :: Int","copyLimit = 128"],"instances":[],"language":{"extensions":["BangPatterns","Rank2Types","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

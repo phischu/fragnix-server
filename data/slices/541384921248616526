@@ -1,1 +1,0 @@
-{"sliceID":541384921248616526,"uses":[],"fragment":["data Side = L\n          | R"],"instances":[],"language":{"extensions":["BangPatterns","DeriveFoldable","DeriveFunctor","DeriveTraversable","UnboxedTuples","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

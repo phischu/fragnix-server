@@ -1,1 +1,0 @@
-{"sliceID":1984109793764947890,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Word"}},"qualification":null}],"fragment":["type Deficit = Word"],"instances":[],"language":{"extensions":["BangPatterns","RecordWildCards","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

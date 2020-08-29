@@ -1,1 +1,0 @@
-{"sliceID":2773282911166902214,"uses":[{"reference":{"builtinModule":"GHC.Base"},"usedName":{"valueName":{"identifier":"const"}},"qualification":null}],"fragment":["asProxyTypeOf :: a -> proxy a -> a","asProxyTypeOf = const"],"instances":[],"language":{"extensions":["NoImplicitPrelude","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

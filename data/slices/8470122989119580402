@@ -1,1 +1,0 @@
-{"sliceID":8470122989119580402,"uses":[{"reference":{"otherSlice":1971102957276645166},"usedName":{"typeName":{"identifier":"Parser"}},"qualification":null}],"fragment":["try :: Parser i a -> Parser i a","try p = p"],"instances":[],"language":{"extensions":["BangPatterns","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

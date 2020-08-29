@@ -1,1 +1,0 @@
-{"sliceID":9192172240566247905,"uses":[{"reference":{"otherSlice":4268993054612146745},"usedName":{"typeName":{"identifier":"Doc"}},"qualification":null}],"fragment":["type RDoc = Doc"],"instances":[],"language":{"extensions":["BangPatterns","DeriveGeneric","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

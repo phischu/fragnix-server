@@ -1,1 +1,0 @@
-{"sliceID":3204970167220424748,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["cookieTokenIx :: Int","cookieTokenIx = 22"],"instances":[],"language":{"extensions":["OverloadedStrings","BangPatterns","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

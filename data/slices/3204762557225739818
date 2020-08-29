@@ -1,1 +1,0 @@
-{"sliceID":3204762557225739818,"uses":[{"reference":{"otherSlice":8984783929342293342},"usedName":{"typeName":{"identifier":"Builder"}},"qualification":null}],"fragment":["data PairS a = PairS a !Builder"],"instances":[],"language":{"extensions":["FlexibleInstances","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

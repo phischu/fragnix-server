@@ -1,1 +1,0 @@
-{"sliceID":336372025368952887,"uses":[],"fragment":["data Direction = To\n               | From"],"instances":[],"language":{"extensions":["BangPatterns","FlexibleInstances","NamedFieldPuns","NoImplicitPrelude","UndecidableInstances","TemplateHaskellQuotes","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards","TemplateHaskell"]}}
