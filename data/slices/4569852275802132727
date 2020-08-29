@@ -1,1 +1,0 @@
-{"sliceID":4569852275802132727,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["type BufSize = Int"],"instances":[],"language":{"extensions":["DeriveDataTypeable","OverloadedStrings","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

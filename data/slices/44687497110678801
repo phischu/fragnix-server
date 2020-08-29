@@ -1,1 +1,0 @@
-{"sliceID":44687497110678801,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"IO"}},"qualification":null}],"fragment":["type DateCacheUpdater = IO ()"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

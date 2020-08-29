@@ -1,1 +1,0 @@
-{"sliceID":6632816543246806595,"uses":[{"reference":{"builtinModule":"GHC.Base"},"usedName":{"typeName":{"identifier":"String"}},"qualification":null}],"fragment":["node :: String","node = \"+--\""],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

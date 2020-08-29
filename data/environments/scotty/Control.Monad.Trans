@@ -1,1 +1,0 @@
-[{"name":"lift","module":"F6485218519662548500","entity":"method","class":"MonadTrans"},{"name":"MonadTrans","module":"F6485218519662548500","entity":"class"},{"name":"liftIO","module":"Control.Monad.IO.Class","entity":"method","class":"MonadIO"},{"name":"MonadIO","module":"Control.Monad.IO.Class","entity":"class"}]

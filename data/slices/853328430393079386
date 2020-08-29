@@ -1,1 +1,0 @@
-{"sliceID":853328430393079386,"uses":[],"fragment":["data LockRequest = ReadLock\n                 | WriteLock\n                 | Unlock"],"instances":[],"language":{"extensions":["CApiFFI","NondecreasingIndentation","RecordWildCards","MultiParamTypeClasses","ExplicitForAll","PatternGuards"]}}

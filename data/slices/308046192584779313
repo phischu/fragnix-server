@@ -1,1 +1,0 @@
-{"sliceID":308046192584779313,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Char"}},"qualification":null}],"fragment":["data T = T {-# UNPACK #-} !Char {-# UNPACK #-} !Char"],"instances":[],"language":{"extensions":["BangPatterns","OverloadedStrings","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

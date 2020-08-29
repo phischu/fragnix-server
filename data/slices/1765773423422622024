@@ -1,1 +1,0 @@
-{"sliceID":1765773423422622024,"uses":[],"fragment":["type Listen w m a = m a -> m (a, w)"],"instances":[],"language":{"extensions":["PolyKinds","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

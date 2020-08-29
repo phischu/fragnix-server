@@ -1,1 +1,0 @@
-{"sliceID":1967376015967899813,"uses":[{"reference":{"otherSlice":6929508421568669800},"usedName":{"typeName":{"identifier":"TokenHeader"}},"qualification":null}],"fragment":["type TokenHeaderList = [TokenHeader]"],"instances":[],"language":{"extensions":["DeriveDataTypeable","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

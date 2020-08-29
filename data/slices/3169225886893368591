@@ -1,1 +1,0 @@
-{"sliceID":3169225886893368591,"uses":[{"reference":{"builtinModule":"GHC.Base"},"usedName":{"typeName":{"identifier":"String"}},"qualification":null}],"fragment":["expiresFormat :: String","expiresFormat = \"%a, %d-%b-%Y %X GMT\""],"instances":[],"language":{"extensions":["OverloadedStrings","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

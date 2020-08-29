@@ -1,1 +1,0 @@
-{"sliceID":1091227026200579269,"uses":[],"fragment":["newtype Tagged (s :: * -> *) b = Tagged{unTagged :: b}"],"instances":[],"language":{"extensions":["BangPatterns","FlexibleInstances","KindSignatures","ScopedTypeVariables","TypeOperators","TypeSynonymInstances","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

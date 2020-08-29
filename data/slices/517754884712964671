@@ -1,1 +1,0 @@
-{"sliceID":517754884712964671,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Char"}},"qualification":null}],"fragment":["pathSeparator :: Char","pathSeparator = '/'"],"instances":[],"language":{"extensions":["MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

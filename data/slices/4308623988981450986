@@ -1,1 +1,0 @@
-{"sliceID":4308623988981450986,"uses":[{"reference":{"builtinModule":"GHC.Types"},"usedName":{"typeName":{"identifier":"Int"}},"qualification":null}],"fragment":["deficitSteps :: Int","deficitSteps = 65536"],"instances":[],"language":{"extensions":["BangPatterns","RecordWildCards","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}

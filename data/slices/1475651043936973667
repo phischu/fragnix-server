@@ -1,1 +1,0 @@
-{"sliceID":1475651043936973667,"uses":[{"reference":{"otherSlice":3155590906824619350},"usedName":{"typeName":{"identifier":"PutM"}},"qualification":null}],"fragment":["type Put = PutM ()"],"instances":[],"language":{"extensions":["FlexibleInstances","MultiParamTypeClasses","NondecreasingIndentation","ExplicitForAll","PatternGuards"]}}
